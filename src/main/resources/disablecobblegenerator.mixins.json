@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.randomnameffp.disablecobblegenerator.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "disablecobblegenerator.refmap.json",
+  "client": [
+    "LiquidBlockMixin",
+    "LavaFluidMixin",
+    "DrillDropMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
