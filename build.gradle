@@ -17,6 +17,12 @@ repositories {
     maven { url = "https://maven.createmod.net" }
     maven { url = "https://mvn.devos.one/snapshots" }
     maven { url = "https://maven.blamejared.com/" }
+    repositories {
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+        }
+    }
 }
 
 base {
@@ -78,6 +84,9 @@ dependencies {
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation "maven.modrinth:b7NV2plI:y9ZpG5jE"
+    implementation "maven.modrinth:lhGA9TYQ:1IiqEQGl"
+    implementation "maven.modrinth:HJetCzWo:lAc3mEva"
 
     // JEI (optional — for recipe integration)
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"

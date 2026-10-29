@@ -1,17 +1,31 @@
 package com.randomnameffp.disablecobblegenerator;
 
+
+import com.simibubi.create.AllBlocks;
+import com.simibubi.create.content.equipment.bell.BellRenderer;
+import com.simibubi.create.content.equipment.bell.HauntedBellBlock;
+import com.simibubi.create.content.equipment.bell.HauntedBellMovementBehaviour;
+import com.simibubi.create.content.schematics.table.SchematicTableBlock;
+import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
+import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
 @Mod(ExampleMod.ID)
 public class ExampleMod {
@@ -26,7 +40,6 @@ public class ExampleMod {
 
     public ExampleMod(IEventBus modBus) {
         REGISTRATE.registerEventListeners(modBus);
-
         modBus.addListener(this::onCommonSetup);
         modBus.addListener(this::onClientSetup);
     }

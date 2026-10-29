@@ -1,5 +1,6 @@
 package com.randomnameffp.disablecobblegenerator.mixin;
 
+import com.simibubi.create.AllBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
@@ -37,6 +38,5 @@ public abstract class LavaFluidMixin {
                 ci.cancel();
             }
         }
-
     }
 }

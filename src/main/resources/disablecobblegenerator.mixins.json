@@ -7,7 +7,15 @@
   "client": [
     "LiquidBlockMixin",
     "LavaFluidMixin",
-    "DrillDropMixin"
+    "HauntedBellEntityMixin",
+    "DrillDropMixin",
+    "PhantomSpawnMixin",
+    "MobExplositionMixin",
+    "PortalMixin",
+    "PortalCreatingMixin",
+    "DisableGolemSpawnMixin",
+    "CanWrenchMixin",
+    "FlintAndSteelItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
